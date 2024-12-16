@@ -17,7 +17,7 @@ $$
 
 This can be used to quantify 'uncertainty' in markets regarding expiration of certain options, and consequently $H$ can be used as a proxy to certain price moves due to the markets needing to re-hedge more.
 
-To find the change of delta entropy with respect to $S$, we differentiate $H$ with respect to \( S \):
+To find the change of delta entropy with respect to $S$, we differentiate $H$ with respect to $S$:
 
 $$
 \frac{dH}{dS} = - \sum_{i} \left( \frac{d\Delta_i}{dS} \ln(\Delta_i) + \Delta_i \frac{d}{dS}\ln(\Delta_i) \right)
