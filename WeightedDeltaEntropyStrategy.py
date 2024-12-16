@@ -1,3 +1,4 @@
+#Main idea of a simple possible strategy using delta entropy, hence without any hedging, stop loss, take profit,...
 from AlgorithmImports import *
 import numpy as np
 
