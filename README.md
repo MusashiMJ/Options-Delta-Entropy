@@ -41,12 +41,8 @@ $$
 \frac{dH}{dS} = - \sum_{i} \frac{d\Delta_i}{dS} \left( \ln(\Delta_i) + 1 \right)
 $$
 
-- The term \( \frac{d\Delta_i(S)}{dS} \) represents the sensitivity of the delta of the \(i\)-th option to changes in the underlying asset price \( S \).
-- The factor \( \ln(\Delta_i + 1 \) reflects the contribution to entropy from each option based on its delta.
-- The sum runs over all options in the chain, so the total sensitivity of entropy to changes in \( S \) depends on how the deltas of all options evolve as \( S \) changes.
-
-For a single option, this simplifies to:
+The term $\frac{d\Delta_i(S)}{dS}$ represents the sensitivity of the options delta to changes in the underlying asset price $S$. This is commonly known as gamma $\Gamma$ giving us the final formula
 
 $$
-\frac{dH}{dS} = - \frac{d\Delta}{dS} \left( \ln(\Delta(S)) + 1 \right)
+\frac{dH}{dS} = - \sum_{i} \Gamma_i \left( \ln(\Delta_i) + 1 \right)
 $$
