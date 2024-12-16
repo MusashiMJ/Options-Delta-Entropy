@@ -1,5 +1,5 @@
 # Options-Delta-Entropy
-It is well-known that Shannon entropy for a random variable $X$ is a measure of uncertainty, quantifying the average amount of "information" or "surprise" inherent in the possible outcomes of $X$. The Shannon entropy is defined as:
+The well-known Shannon entropy for a random variable $X$ is a measure of uncertainty, quantifying the average amount of "information" or "surprise" inherent in the possible outcomes of $X$. The Shannon entropy is defined as:
 
 $$
 H(X) = - \sum_{i} p_i \ln(p_i)
@@ -7,9 +7,9 @@ $$
 
 where $p_i$ represents the probability of the $i$-th outcome of $X$. This formulation shows how entropy is related to the probability distribution of the random variable: the more uncertain the outcome, the higher the entropy.
 
-In the context of options trading, the delta $\Delta$ of an option can be interpreted as a proxy for probability. Specifically, the delta measures the sensitivity of the option's price to changes in the underlying asset's price, and can be viewed as an estimate of the probability that the option will finish in-the-money. Thus, the delta of an option can be treated as the probability of a certain event occurring (option expiring in-the-money).
+In the context of options trading, the delta $\Delta$ of an option can be interpreted as a proxy for probability. Specifically, the delta measures the sensitivity of the option's price to changes in the underlying asset's price, and can be viewed as a proxy for the probability that the option will finish in-the-money. Thus, the delta of an option can be treated as the probability of a certain event occurring (option expiring in-the-money).
 
-One can represent an entire options chain as a random variable where the deltas of individual options represent the values of this random variable. If $\Delta_i$ is the delta of the $i$-th option in the chain, we can conceptualize the entropy of this 'delta portfolio' as a measure of the uncertainty across the various options in the chain. The entropy of the options chain can thus be written as:
+One can represent an entire options chain as a random variable where the deltas of individual options represent the values of this random variable. If $\Delta_i$ is the delta of the $i$-th option in the chain, we can conceptualize the entropy  as a measure of the uncertainty across the various options in the chain regarding in-the-money-expirations. The entropy of the options chain can thus be written as:
 
 $$
 H = - \sum_{i} \Delta_i \ln(\Delta_i)
