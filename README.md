@@ -15,33 +15,24 @@ $$
 H = - \sum_{i} \Delta_i \ln(\Delta_i)
 $$
 
-This can be used to quantify 'uncertainty' in markets regarding expiration of certain options, and consequently $H$ can be used as a proxy to larger price moves due to the markets needing to re-hedge more.
+This can be used to quantify 'uncertainty' in markets regarding expiration of certain options, and consequently $H$ can be used as a proxy to certain price moves due to the markets needing to re-hedge more.
 
-To find the rate of change of entropy with respect to \( S \), we differentiate \( H \) with respect to \( S \):
+To find the change of delta entropy with respect to $S$, we differentiate $H$ with respect to \( S \):
 
 $$
 \frac{dH}{dS} = - \sum_{i} \left( \frac{d\Delta_i}{dS} \ln(\Delta_i) + \Delta_i \frac{d}{dS}\ln(\Delta_i) \right)
 $$
-
-Using the chain rule, the derivative of \( \ln(\Delta_i \) with respect to \( S \) is:
-
 $$
-\frac{d}{dS}[\ln(\Delta_i] = \frac{1}{\Delta_i} \frac{d\Delta_i}{dS}
+ = - \sum_{i} \left( \frac{d\Delta_i}{dS} \ln(\Delta_i) + \frac{1}{\Delta_i(S)} \Delta_i \frac{d\Delta_i}{dS} \right)
 $$
 
-Substituting this into the expression for \( \frac{dH}{dS} \), we get:
-
-$$
-\frac{dH}{dS} = - \sum_{i} \left( \frac{d\Delta_i}{dS} \ln(\Delta_i) + \frac{1}{\Delta_i(S)} \Delta_i \frac{d\Delta_i}{dS} \right)
-$$
-
-Simplifying:
+Simplifying this expression gives us
 
 $$
 \frac{dH}{dS} = - \sum_{i} \frac{d\Delta_i}{dS} \left( \ln(\Delta_i) + 1 \right)
 $$
 
-The term $\frac{d\Delta_i(S)}{dS}$ represents the sensitivity of the options delta to changes in the underlying asset price $S$. This is commonly known as gamma $\Gamma$ giving us the final formula
+The term $\frac{d\Delta_i(S)}{dS}$ is commonly known as gamma $\Gamma$
 
 $$
 \frac{dH}{dS} = - \sum_{i} \Gamma_i \left( \ln(\Delta_i) + 1 \right)
