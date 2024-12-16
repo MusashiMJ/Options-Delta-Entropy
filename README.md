@@ -37,3 +37,25 @@ The term $\frac{d\Delta_i(S)}{dS}$ is commonly known as gamma $\Gamma$
 $$
 \frac{dH}{dS} = - \sum_{i} \Gamma_i \left( \ln(\Delta_i) + 1 \right)
 $$
+
+# Weighted-Options-Delta-Entropy
+
+Consider some weight $w$ affecting the overall contribution of an option to $H$, i.e
+
+$$
+\hat{H} = - \sum_{i} w_i \Delta_i \ln(\Delta_i)
+$$
+
+If we pick $w_i$ to represent the current open interest of the $i$-th option, then we find it a metric of appropriate contribution proportionate to its size-contribution to the options chain. Taking the derivative, we get
+
+$$
+\frac{d \hat{H}}{dS} = - \sum_{i} OI_i \Gamma_i \left( \ln(\Delta_i) + 1 \right)
+$$
+
+Curiously, one might notice that this can be simplified as
+
+$$
+\frac{d \hat{H}}{dS} = - \sum_{i} GEX_i \left( \ln(\Delta_i) + 1 \right)
+$$
+
+where GEX is the gamma exposure
