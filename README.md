@@ -59,3 +59,37 @@ $$
 $$
 
 where GEX is the gamma exposure
+
+# Showing positioning in Markets
+
+Here is the weighted derivative vs underlying price for 9th December 2024
+
+![Screenshot 2024-12-18 at 15-58-54 ](https://github.com/user-attachments/assets/68051fa0-273e-4dc3-a9c9-13b930d82ee2)
+
+About a week later 18th December 2024
+
+![Screenshot 2024-12-18 at 15-59-27 ](https://github.com/user-attachments/assets/757d4ed6-6c7f-4c10-bb89-72c7a564cd5f)
+
+There is larger positive build up creating a wall around prices above and below the spot price, esuggesting sensitivity to uncertainity built likely due to larger build up of calls or sold puts needing careful re-hedging if prices were to move in those directions. Notice it looks similar to call IV - put IV plotted:
+
+![IVdiffvsStrikeSPX17:12:2024](https://github.com/user-attachments/assets/c8a8c9ff-54b8-4c04-b4b1-4d3b8a148cb9)
+
+This is due to the fact that the derivative of delta entropy naturally contains the GEX term in there. GEX is a proxy for liquidity/volatility of markets due to its massive role in mechanisms of liquidity providing and how dealers are positioned, so it makes sense to see this. As an option delta gets closer to 1, the derivative of delta entropy becomes closer to net GEX. We can see the deltas with which there is larger sensitivity to uncertainty, likely where moves from re-hedging become exacerbated,
+
+9th December 2024
+
+![Screenshot 2024-12-18 at 16-40-47 ](https://github.com/user-attachments/assets/9ed4028a-7a3e-4190-945c-c04ffb0b6515)
+
+18th December 2024
+
+![Screenshot 2024-12-18 at 19-11-01 ](https://github.com/user-attachments/assets/9537a760-7190-4c18-81b6-efbd0ff53a1a)
+
+At the time, the spot gamma levels indicated that the underlying price of SPX was at the zero-gex level, and taking a look above we can see that the spot was at the largest negative sensitivity level. A catalyst would cause an exacerbated price move, especially since we were nearing an expiration date with high associated delta entropy (20th December 2024) as can be seen ![deltaoptionsentropyFigure_1](https://github.com/user-attachments/assets/0604a586-c543-4fe8-8655-a065b2ff584f)
+
+The FED announced rate cuts slightly after all of this data was calculated, and the markets moved down faster as theorized
+
+![Screenshot 2024-12-18 at 20-18-35 S P 500 Index Chart — SPX Quote — TradingView](https://github.com/user-attachments/assets/b0a58c56-e6eb-40c2-b805-f624e0d7abc6)
+
+
+
+
