@@ -104,6 +104,4 @@ Without weights, Shannon entropy would yield the analog of $\tau$ as $\sum_i p_i
 $$
 \tau' = H' - GEX = - \sum_{i} OI_i \Gamma_i \left( \ln(\Delta_i) + 1 \right) - \sum_i OI_i \Gamma_i = - \sum_{i} OI_i \Gamma_i \left( \ln(\Delta_i) + 2 \right)
 $$
-$$
-= \ln\left(\prod_i \delta_i^{OI_i \frac{d\delta_i}{dS}}e^{2 GEX}\right)
-$$
+
